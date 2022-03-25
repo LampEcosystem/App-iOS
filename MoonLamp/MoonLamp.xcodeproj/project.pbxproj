@@ -1,0 +1,719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19ABC24027ED57F800AEC4D1 /* MoonLampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC23F27ED57F800AEC4D1 /* MoonLampApp.swift */; };
+		19ABC24227ED57F800AEC4D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC24127ED57F800AEC4D1 /* ContentView.swift */; };
+		19ABC24427ED57F900AEC4D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ABC24327ED57F900AEC4D1 /* Assets.xcassets */; };
+		19ABC24727ED57F900AEC4D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ABC24627ED57F900AEC4D1 /* Preview Assets.xcassets */; };
+		19ABC24927ED57F900AEC4D1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC24827ED57F900AEC4D1 /* Persistence.swift */; };
+		19ABC24C27ED57F900AEC4D1 /* MoonLamp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC24A27ED57F900AEC4D1 /* MoonLamp.xcdatamodeld */; };
+		19ABC25627ED57F900AEC4D1 /* MoonLampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC25527ED57F900AEC4D1 /* MoonLampTests.swift */; };
+		19ABC26027ED57F900AEC4D1 /* MoonLampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC25F27ED57F900AEC4D1 /* MoonLampUITests.swift */; };
+		19ABC26227ED57F900AEC4D1 /* MoonLampUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC26127ED57F900AEC4D1 /* MoonLampUITestsLaunchTests.swift */; };
+		19ABC26F27ED582F00AEC4D1 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC26E27ED582F00AEC4D1 /* DeviceManager.swift */; };
+		19ABC27027ED582F00AEC4D1 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC26E27ED582F00AEC4D1 /* DeviceManager.swift */; };
+		19ABC27127ED582F00AEC4D1 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC26E27ED582F00AEC4D1 /* DeviceManager.swift */; };
+		19ABC27327ED629000AEC4D1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC27227ED629000AEC4D1 /* Device.swift */; };
+		19ABC27427ED629000AEC4D1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC27227ED629000AEC4D1 /* Device.swift */; };
+		19ABC27527ED629000AEC4D1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC27227ED629000AEC4D1 /* Device.swift */; };
+		19ABC27827EE096C00AEC4D1 /* MoonLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC27727EE096C00AEC4D1 /* MoonLamp.swift */; };
+		19ABC27927EE096C00AEC4D1 /* MoonLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC27727EE096C00AEC4D1 /* MoonLamp.swift */; };
+		19ABC27A27EE096C00AEC4D1 /* MoonLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC27727EE096C00AEC4D1 /* MoonLamp.swift */; };
+		19ABC27D27EE247C00AEC4D1 /* MoonLampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC27C27EE247C00AEC4D1 /* MoonLampView.swift */; };
+		19ABC27E27EE247C00AEC4D1 /* MoonLampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC27C27EE247C00AEC4D1 /* MoonLampView.swift */; };
+		19ABC27F27EE247C00AEC4D1 /* MoonLampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC27C27EE247C00AEC4D1 /* MoonLampView.swift */; };
+		19ABC28127EE25C300AEC4D1 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28027EE25C300AEC4D1 /* GradientSlider.swift */; };
+		19ABC28227EE25C300AEC4D1 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28027EE25C300AEC4D1 /* GradientSlider.swift */; };
+		19ABC28327EE25C300AEC4D1 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28027EE25C300AEC4D1 /* GradientSlider.swift */; };
+		19ABC28527EE25E500AEC4D1 /* LampWifiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28427EE25E500AEC4D1 /* LampWifiView.swift */; };
+		19ABC28627EE25E500AEC4D1 /* LampWifiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28427EE25E500AEC4D1 /* LampWifiView.swift */; };
+		19ABC28727EE25E500AEC4D1 /* LampWifiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28427EE25E500AEC4D1 /* LampWifiView.swift */; };
+		19ABC28927EE262400AEC4D1 /* WifiSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */; };
+		19ABC28A27EE262400AEC4D1 /* WifiSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */; };
+		19ABC28B27EE262400AEC4D1 /* WifiSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */; };
+		19ABC28D27EE26AD00AEC4D1 /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28C27EE26AD00AEC4D1 /* Lamp.swift */; };
+		19ABC28E27EE26AD00AEC4D1 /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28C27EE26AD00AEC4D1 /* Lamp.swift */; };
+		19ABC28F27EE26AD00AEC4D1 /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28C27EE26AD00AEC4D1 /* Lamp.swift */; };
+		19ABC29127EE282F00AEC4D1 /* LampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29027EE282F00AEC4D1 /* LampView.swift */; };
+		19ABC29227EE282F00AEC4D1 /* LampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29027EE282F00AEC4D1 /* LampView.swift */; };
+		19ABC29327EE282F00AEC4D1 /* LampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29027EE282F00AEC4D1 /* LampView.swift */; };
+		19ABC29527EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */; };
+		19ABC29627EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */; };
+		19ABC29727EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */; };
+		19ABC29927EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29827EE28FF00AEC4D1 /* BrowserRowViews.swift */; };
+		19ABC29A27EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29827EE28FF00AEC4D1 /* BrowserRowViews.swift */; };
+		19ABC29B27EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29827EE28FF00AEC4D1 /* BrowserRowViews.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19ABC25227ED57F900AEC4D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19ABC23427ED57F800AEC4D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ABC23B27ED57F800AEC4D1;
+			remoteInfo = MoonLamp;
+		};
+		19ABC25C27ED57F900AEC4D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19ABC23427ED57F800AEC4D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ABC23B27ED57F800AEC4D1;
+			remoteInfo = MoonLamp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19ABC23C27ED57F800AEC4D1 /* MoonLamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonLamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ABC23F27ED57F800AEC4D1 /* MoonLampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampApp.swift; sourceTree = "<group>"; };
+		19ABC24127ED57F800AEC4D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		19ABC24327ED57F900AEC4D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19ABC24627ED57F900AEC4D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19ABC24827ED57F900AEC4D1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		19ABC24B27ED57F900AEC4D1 /* MoonLamp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoonLamp.xcdatamodel; sourceTree = "<group>"; };
+		19ABC25127ED57F900AEC4D1 /* MoonLampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonLampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ABC25527ED57F900AEC4D1 /* MoonLampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampTests.swift; sourceTree = "<group>"; };
+		19ABC25B27ED57F900AEC4D1 /* MoonLampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonLampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ABC25F27ED57F900AEC4D1 /* MoonLampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampUITests.swift; sourceTree = "<group>"; };
+		19ABC26127ED57F900AEC4D1 /* MoonLampUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		19ABC26E27ED582F00AEC4D1 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		19ABC27227ED629000AEC4D1 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		19ABC27727EE096C00AEC4D1 /* MoonLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLamp.swift; sourceTree = "<group>"; };
+		19ABC27C27EE247C00AEC4D1 /* MoonLampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampView.swift; sourceTree = "<group>"; };
+		19ABC28027EE25C300AEC4D1 /* GradientSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
+		19ABC28427EE25E500AEC4D1 /* LampWifiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampWifiView.swift; sourceTree = "<group>"; };
+		19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiSettingsView.swift; sourceTree = "<group>"; };
+		19ABC28C27EE26AD00AEC4D1 /* Lamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
+		19ABC29027EE282F00AEC4D1 /* LampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampView.swift; sourceTree = "<group>"; };
+		19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBrowserView.swift; sourceTree = "<group>"; };
+		19ABC29827EE28FF00AEC4D1 /* BrowserRowViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserRowViews.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19ABC23927ED57F800AEC4D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABC24E27ED57F900AEC4D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABC25827ED57F900AEC4D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19ABC23327ED57F800AEC4D1 = {
+			isa = PBXGroup;
+			children = (
+				19ABC23E27ED57F800AEC4D1 /* MoonLamp */,
+				19ABC25427ED57F900AEC4D1 /* MoonLampTests */,
+				19ABC25E27ED57F900AEC4D1 /* MoonLampUITests */,
+				19ABC23D27ED57F800AEC4D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19ABC23D27ED57F800AEC4D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC23C27ED57F800AEC4D1 /* MoonLamp.app */,
+				19ABC25127ED57F900AEC4D1 /* MoonLampTests.xctest */,
+				19ABC25B27ED57F900AEC4D1 /* MoonLampUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19ABC23E27ED57F800AEC4D1 /* MoonLamp */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC27B27EE244E00AEC4D1 /* Views */,
+				19ABC27627EE095900AEC4D1 /* Devices */,
+				19ABC23F27ED57F800AEC4D1 /* MoonLampApp.swift */,
+				19ABC24127ED57F800AEC4D1 /* ContentView.swift */,
+				19ABC24327ED57F900AEC4D1 /* Assets.xcassets */,
+				19ABC24827ED57F900AEC4D1 /* Persistence.swift */,
+				19ABC24A27ED57F900AEC4D1 /* MoonLamp.xcdatamodeld */,
+				19ABC24527ED57F900AEC4D1 /* Preview Content */,
+				19ABC26E27ED582F00AEC4D1 /* DeviceManager.swift */,
+			);
+			path = MoonLamp;
+			sourceTree = "<group>";
+		};
+		19ABC24527ED57F900AEC4D1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC24627ED57F900AEC4D1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		19ABC25427ED57F900AEC4D1 /* MoonLampTests */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC25527ED57F900AEC4D1 /* MoonLampTests.swift */,
+			);
+			path = MoonLampTests;
+			sourceTree = "<group>";
+		};
+		19ABC25E27ED57F900AEC4D1 /* MoonLampUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC25F27ED57F900AEC4D1 /* MoonLampUITests.swift */,
+				19ABC26127ED57F900AEC4D1 /* MoonLampUITestsLaunchTests.swift */,
+			);
+			path = MoonLampUITests;
+			sourceTree = "<group>";
+		};
+		19ABC27627EE095900AEC4D1 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC27227ED629000AEC4D1 /* Device.swift */,
+				19ABC27727EE096C00AEC4D1 /* MoonLamp.swift */,
+				19ABC28C27EE26AD00AEC4D1 /* Lamp.swift */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		19ABC27B27EE244E00AEC4D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC27C27EE247C00AEC4D1 /* MoonLampView.swift */,
+				19ABC29027EE282F00AEC4D1 /* LampView.swift */,
+				19ABC28027EE25C300AEC4D1 /* GradientSlider.swift */,
+				19ABC28427EE25E500AEC4D1 /* LampWifiView.swift */,
+				19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */,
+				19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */,
+				19ABC29827EE28FF00AEC4D1 /* BrowserRowViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19ABC23B27ED57F800AEC4D1 /* MoonLamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ABC26527ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLamp" */;
+			buildPhases = (
+				19ABC23827ED57F800AEC4D1 /* Sources */,
+				19ABC23927ED57F800AEC4D1 /* Frameworks */,
+				19ABC23A27ED57F800AEC4D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoonLamp;
+			productName = MoonLamp;
+			productReference = 19ABC23C27ED57F800AEC4D1 /* MoonLamp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19ABC25027ED57F900AEC4D1 /* MoonLampTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ABC26827ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLampTests" */;
+			buildPhases = (
+				19ABC24D27ED57F900AEC4D1 /* Sources */,
+				19ABC24E27ED57F900AEC4D1 /* Frameworks */,
+				19ABC24F27ED57F900AEC4D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19ABC25327ED57F900AEC4D1 /* PBXTargetDependency */,
+			);
+			name = MoonLampTests;
+			productName = MoonLampTests;
+			productReference = 19ABC25127ED57F900AEC4D1 /* MoonLampTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19ABC25A27ED57F900AEC4D1 /* MoonLampUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ABC26B27ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLampUITests" */;
+			buildPhases = (
+				19ABC25727ED57F900AEC4D1 /* Sources */,
+				19ABC25827ED57F900AEC4D1 /* Frameworks */,
+				19ABC25927ED57F900AEC4D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19ABC25D27ED57F900AEC4D1 /* PBXTargetDependency */,
+			);
+			name = MoonLampUITests;
+			productName = MoonLampUITests;
+			productReference = 19ABC25B27ED57F900AEC4D1 /* MoonLampUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19ABC23427ED57F800AEC4D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					19ABC23B27ED57F800AEC4D1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					19ABC25027ED57F900AEC4D1 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 19ABC23B27ED57F800AEC4D1;
+					};
+					19ABC25A27ED57F900AEC4D1 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 19ABC23B27ED57F800AEC4D1;
+					};
+				};
+			};
+			buildConfigurationList = 19ABC23727ED57F800AEC4D1 /* Build configuration list for PBXProject "MoonLamp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19ABC23327ED57F800AEC4D1;
+			productRefGroup = 19ABC23D27ED57F800AEC4D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19ABC23B27ED57F800AEC4D1 /* MoonLamp */,
+				19ABC25027ED57F900AEC4D1 /* MoonLampTests */,
+				19ABC25A27ED57F900AEC4D1 /* MoonLampUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19ABC23A27ED57F800AEC4D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ABC24727ED57F900AEC4D1 /* Preview Assets.xcassets in Resources */,
+				19ABC24427ED57F900AEC4D1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABC24F27ED57F900AEC4D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABC25927ED57F900AEC4D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19ABC23827ED57F800AEC4D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ABC27D27EE247C00AEC4D1 /* MoonLampView.swift in Sources */,
+				19ABC28127EE25C300AEC4D1 /* GradientSlider.swift in Sources */,
+				19ABC24C27ED57F900AEC4D1 /* MoonLamp.xcdatamodeld in Sources */,
+				19ABC28527EE25E500AEC4D1 /* LampWifiView.swift in Sources */,
+				19ABC24927ED57F900AEC4D1 /* Persistence.swift in Sources */,
+				19ABC29927EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */,
+				19ABC27827EE096C00AEC4D1 /* MoonLamp.swift in Sources */,
+				19ABC24227ED57F800AEC4D1 /* ContentView.swift in Sources */,
+				19ABC27327ED629000AEC4D1 /* Device.swift in Sources */,
+				19ABC28927EE262400AEC4D1 /* WifiSettingsView.swift in Sources */,
+				19ABC29527EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */,
+				19ABC26F27ED582F00AEC4D1 /* DeviceManager.swift in Sources */,
+				19ABC24027ED57F800AEC4D1 /* MoonLampApp.swift in Sources */,
+				19ABC28D27EE26AD00AEC4D1 /* Lamp.swift in Sources */,
+				19ABC29127EE282F00AEC4D1 /* LampView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABC24D27ED57F900AEC4D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ABC27927EE096C00AEC4D1 /* MoonLamp.swift in Sources */,
+				19ABC27427ED629000AEC4D1 /* Device.swift in Sources */,
+				19ABC29A27EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */,
+				19ABC29227EE282F00AEC4D1 /* LampView.swift in Sources */,
+				19ABC29627EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */,
+				19ABC27E27EE247C00AEC4D1 /* MoonLampView.swift in Sources */,
+				19ABC25627ED57F900AEC4D1 /* MoonLampTests.swift in Sources */,
+				19ABC28A27EE262400AEC4D1 /* WifiSettingsView.swift in Sources */,
+				19ABC28E27EE26AD00AEC4D1 /* Lamp.swift in Sources */,
+				19ABC28227EE25C300AEC4D1 /* GradientSlider.swift in Sources */,
+				19ABC28627EE25E500AEC4D1 /* LampWifiView.swift in Sources */,
+				19ABC27027ED582F00AEC4D1 /* DeviceManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABC25727ED57F900AEC4D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ABC27F27EE247C00AEC4D1 /* MoonLampView.swift in Sources */,
+				19ABC29727EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */,
+				19ABC28727EE25E500AEC4D1 /* LampWifiView.swift in Sources */,
+				19ABC29B27EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */,
+				19ABC28B27EE262400AEC4D1 /* WifiSettingsView.swift in Sources */,
+				19ABC27A27EE096C00AEC4D1 /* MoonLamp.swift in Sources */,
+				19ABC26227ED57F900AEC4D1 /* MoonLampUITestsLaunchTests.swift in Sources */,
+				19ABC28F27EE26AD00AEC4D1 /* Lamp.swift in Sources */,
+				19ABC27127ED582F00AEC4D1 /* DeviceManager.swift in Sources */,
+				19ABC29327EE282F00AEC4D1 /* LampView.swift in Sources */,
+				19ABC26027ED57F900AEC4D1 /* MoonLampUITests.swift in Sources */,
+				19ABC27527ED629000AEC4D1 /* Device.swift in Sources */,
+				19ABC28327EE25C300AEC4D1 /* GradientSlider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19ABC25327ED57F900AEC4D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19ABC23B27ED57F800AEC4D1 /* MoonLamp */;
+			targetProxy = 19ABC25227ED57F900AEC4D1 /* PBXContainerItemProxy */;
+		};
+		19ABC25D27ED57F900AEC4D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19ABC23B27ED57F800AEC4D1 /* MoonLamp */;
+			targetProxy = 19ABC25C27ED57F900AEC4D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		19ABC26327ED57F900AEC4D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19ABC26427ED57F900AEC4D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19ABC26627ED57F900AEC4D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MoonLamp/Preview Content\"";
+				DEVELOPMENT_TEAM = Z6G83N9S59;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Discover devices via Bluetooth";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cptingle.MoonLamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19ABC26727ED57F900AEC4D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MoonLamp/Preview Content\"";
+				DEVELOPMENT_TEAM = Z6G83N9S59;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Discover devices via Bluetooth";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cptingle.MoonLamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19ABC26927ED57F900AEC4D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6G83N9S59;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cptingle.MoonLampTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoonLamp.app/MoonLamp";
+			};
+			name = Debug;
+		};
+		19ABC26A27ED57F900AEC4D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6G83N9S59;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cptingle.MoonLampTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoonLamp.app/MoonLamp";
+			};
+			name = Release;
+		};
+		19ABC26C27ED57F900AEC4D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6G83N9S59;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cptingle.MoonLampUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoonLamp;
+			};
+			name = Debug;
+		};
+		19ABC26D27ED57F900AEC4D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6G83N9S59;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cptingle.MoonLampUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoonLamp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19ABC23727ED57F800AEC4D1 /* Build configuration list for PBXProject "MoonLamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ABC26327ED57F900AEC4D1 /* Debug */,
+				19ABC26427ED57F900AEC4D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ABC26527ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ABC26627ED57F900AEC4D1 /* Debug */,
+				19ABC26727ED57F900AEC4D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ABC26827ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLampTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ABC26927ED57F900AEC4D1 /* Debug */,
+				19ABC26A27ED57F900AEC4D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ABC26B27ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLampUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ABC26C27ED57F900AEC4D1 /* Debug */,
+				19ABC26D27ED57F900AEC4D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		19ABC24A27ED57F900AEC4D1 /* MoonLamp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				19ABC24B27ED57F900AEC4D1 /* MoonLamp.xcdatamodel */,
+			);
+			currentVersion = 19ABC24B27ED57F900AEC4D1 /* MoonLamp.xcdatamodel */;
+			path = MoonLamp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 19ABC23427ED57F800AEC4D1 /* Project object */;
+}
