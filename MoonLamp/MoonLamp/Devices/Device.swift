@@ -60,6 +60,8 @@ class Device: NSObject, ObservableObject {
         self.characteristics[characteristic.uuid] = characteristic
         print(characteristic)
     }
+    
+    func postCharacteristicRegistration() {}
 }
 
 /*
@@ -84,10 +86,10 @@ extension Device {
  * WIFI SERVICE EXTENSION
  */
 extension Device {
-    static let WIFI_SERVICE_UUID = CBUUID(string: "08c7042c-12da-49e8-845e-6086d18a81fa")
-    static let SSID_UUID = CBUUID(string: "18c7042c-12da-49e8-845e-6086d18a81fa")
-    static let PSK_UUID = CBUUID(string: "28c7042c-12da-49e8-845e-6086d18a81fa")
-    static let WIFI_UPDATE_UUID = CBUUID(string: "38c7042c-12da-49e8-845e-6086d18a81fa")
+    static let WIFI_SERVICE_UUID = CBUUID(string: "3001A7D3-D8A4-4FEA-8174-1736E808C066")
+    static let SSID_UUID = CBUUID(string: "3002A7D3-D8A4-4FEA-8174-1736E808C066")
+    static let PSK_UUID = CBUUID(string: "3003A7D3-D8A4-4FEA-8174-1736E808C066")
+    static let WIFI_UPDATE_UUID = CBUUID(string: "3004A7D3-D8A4-4FEA-8174-1736E808C066")
     
     struct WifiState: Equatable {
         var ssid = ""
@@ -141,9 +143,9 @@ extension Device {
  * ASSOCIATION SERVICE EXTENSION
  */
 extension Device {
-    static let ASSOCIATION_SERVICE_UUID = CBUUID(string: "4ACB")
-    static let ASSOCIATION_CODE_CHARACTERISTIC_UUID = CBUUID(string: "4ACB")
-    static let IS_ASSOCIATED_CHARACTERISTIC_UUID = CBUUID(string: "4ACB")
+    static let ASSOCIATION_SERVICE_UUID = CBUUID(string: "2001A7D3-D8A4-4FEA-8174-1736E808C066")
+    static let ASSOCIATION_CODE_CHARACTERISTIC_UUID = CBUUID(string: "2002A7D3-D8A4-4FEA-8174-1736E808C066")
+    static let IS_ASSOCIATED_CHARACTERISTIC_UUID = CBUUID(string: "2003A7D3-D8A4-4FEA-8174-1736E808C066")
     
     struct AssociationState: Equatable {
         var associationCode = ""
@@ -156,8 +158,8 @@ extension Device {
  * UTILITY SERVICE EXTENSION
  */
 extension Device {
-    static let UTILITY_SERVICE_UUID = CBUUID(string: "")
-    static let NAME_CHARACTERISTIC_UUID = CBUUID(string: "")
+    static let UTILITY_SERVICE_UUID = CBUUID(string: "1001A7D3-D8A4-4FEA-8174-1736E808C066")
+    static let NAME_CHARACTERISTIC_UUID = CBUUID(string: "1002A7D3-D8A4-4FEA-8174-1736E808C066")
     
     struct UtilityState: Equatable {
         var name = ""
@@ -187,10 +189,14 @@ extension Device: CBPeripheralDelegate {
         for characteristic in characteristics {
             registerCharacteristic(peripheral: peripheral, service: service, characteristic: characteristic)
         }
+        
+        postCharacteristicRegistration()
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
     }
+    
+
     
     public func parseBoolean(for value: Data) -> Bool {
         return value.first == 1

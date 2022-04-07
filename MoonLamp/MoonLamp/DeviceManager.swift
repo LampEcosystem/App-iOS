@@ -20,7 +20,7 @@ class DeviceManager: NSObject, ObservableObject {
     }
     
     private var devices = [
-        "lamps": [String: Device]()//,
+        "moonlamps": [String: Device]()//,
 //        "doorbells": [String: Device]()
     ]
     
@@ -71,7 +71,7 @@ extension DeviceManager: CBCentralManagerDelegate {
         if bluetoothManager.state == .poweredOn {
             isScanning = true
             print("Scanning for Devices")
-            bluetoothManager.scanForPeripherals(withServices: [Lamp.LAMP_SERVICE_UUID])
+            bluetoothManager.scanForPeripherals(withServices: [Device.UTILITY_SERVICE_UUID])
             scheduleStopScan()
         }
     }

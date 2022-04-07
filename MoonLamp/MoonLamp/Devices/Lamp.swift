@@ -29,6 +29,8 @@ class Lamp: Device {
     }
     
     override func isConnected() -> Bool {
+        print("checkiung connected")
+        print(characteristics)
         return super.isConnected() && characteristics[Lamp.HSV_UUID] != nil && characteristics[Lamp.BRIGHTNESS_UUID] != nil && characteristics[Lamp.ON_OFF_UUID] != nil
     }
     
@@ -50,6 +52,13 @@ class Lamp: Device {
         super.registerCharacteristic(peripheral: peripheral, service: service, characteristic: characteristic)
         peripheral.readValue(for: characteristic)
         peripheral.setNotifyValue(true, for: characteristic)
+    }
+    
+    override func postCharacteristicRegistration() {
+        if self.characteristics[Lamp.HSV_UUID] != nil && self.characteristics[Lamp.BRIGHTNESS_UUID] != nil && self.characteristics[Lamp.ON_OFF_UUID] != nil {
+            skipNextDeviceUpdate = true
+            state.isConnected = true
+        }
     }
 }
 
@@ -75,15 +84,15 @@ extension Lamp {
 }
 
 extension Lamp {
-    static let LAMP_SERVICE_UUID = CBUUID(string: "0001a7d3-d8a4-4fea-8174-1736e808c066")
-    static let HSV_UUID = CBUUID(string: "0002a7d3-d8a4-4fea-8174-1736e808c066")
-    static let BRIGHTNESS_UUID = CBUUID(string: "0003a7d3-d8a4-4fea-8174-1736e808c066")
-    static let ON_OFF_UUID = CBUUID(string: "0004a7d3-d8a4-4fea-8174-1736e808c066")
+    static let LAMP_SERVICE_UUID = CBUUID(string: "0001A7D3-D8A4-4FEA-8174-1736E808C066")
+    static let HSV_UUID = CBUUID(string: "0002A7D3-D8A4-4FEA-8174-1736E808C066")
+    static let BRIGHTNESS_UUID = CBUUID(string: "0003A7D3-D8A4-4FEA-8174-1736E808C066")
+    static let ON_OFF_UUID = CBUUID(string: "0004A7D3-D8A4-4FEA-8174-1736E808C066")
     
     internal func updateDevice(force: Bool = false) {
         if state.isConnected && (force || !shouldSkipUpdateDevice) {
             pendingBluetoothUpdate = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
                 self?.writeOnOff()
                 self?.writeBrightness()
                 self?.writeHSV()
