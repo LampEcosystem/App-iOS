@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1978C4952802397300BB61A4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C4942802397300BB61A4 /* Service.swift */; };
+		1978C49728023F0100BB61A4 /* ServiceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C49628023F0100BB61A4 /* ServiceState.swift */; };
+		1978C49928023F2000BB61A4 /* WifiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C49828023F2000BB61A4 /* WifiState.swift */; };
 		19ABC24027ED57F800AEC4D1 /* MoonLampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC23F27ED57F800AEC4D1 /* MoonLampApp.swift */; };
 		19ABC24227ED57F800AEC4D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC24127ED57F800AEC4D1 /* ContentView.swift */; };
 		19ABC24427ED57F900AEC4D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ABC24327ED57F900AEC4D1 /* Assets.xcassets */; };
@@ -69,6 +72,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1978C4942802397300BB61A4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		1978C49628023F0100BB61A4 /* ServiceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceState.swift; sourceTree = "<group>"; };
+		1978C49828023F2000BB61A4 /* WifiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiState.swift; sourceTree = "<group>"; };
 		19ABC23C27ED57F800AEC4D1 /* MoonLamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonLamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ABC23F27ED57F800AEC4D1 /* MoonLampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampApp.swift; sourceTree = "<group>"; };
 		19ABC24127ED57F800AEC4D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +125,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1978C4932802378200BB61A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1978C4942802397300BB61A4 /* Service.swift */,
+				1978C49628023F0100BB61A4 /* ServiceState.swift */,
+				1978C49828023F2000BB61A4 /* WifiState.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		19ABC23327ED57F800AEC4D1 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +158,7 @@
 		19ABC23E27ED57F800AEC4D1 /* MoonLamp */ = {
 			isa = PBXGroup;
 			children = (
+				1978C4932802378200BB61A4 /* Services */,
 				19ABC27B27EE244E00AEC4D1 /* Views */,
 				19ABC27627EE095900AEC4D1 /* Devices */,
 				19ABC23F27ED57F800AEC4D1 /* MoonLampApp.swift */,
@@ -336,6 +353,7 @@
 			files = (
 				19ABC27D27EE247C00AEC4D1 /* MoonLampView.swift in Sources */,
 				19ABC28127EE25C300AEC4D1 /* GradientSlider.swift in Sources */,
+				1978C49928023F2000BB61A4 /* WifiState.swift in Sources */,
 				19ABC24C27ED57F900AEC4D1 /* MoonLamp.xcdatamodeld in Sources */,
 				19ABC28527EE25E500AEC4D1 /* LampWifiView.swift in Sources */,
 				19ABC24927ED57F900AEC4D1 /* Persistence.swift in Sources */,
@@ -343,12 +361,14 @@
 				19ABC27827EE096C00AEC4D1 /* MoonLamp.swift in Sources */,
 				19ABC24227ED57F800AEC4D1 /* ContentView.swift in Sources */,
 				19ABC27327ED629000AEC4D1 /* Device.swift in Sources */,
+				1978C49728023F0100BB61A4 /* ServiceState.swift in Sources */,
 				19ABC28927EE262400AEC4D1 /* WifiSettingsView.swift in Sources */,
 				19ABC29527EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */,
 				19ABC26F27ED582F00AEC4D1 /* DeviceManager.swift in Sources */,
 				19ABC24027ED57F800AEC4D1 /* MoonLampApp.swift in Sources */,
 				19ABC28D27EE26AD00AEC4D1 /* Lamp.swift in Sources */,
 				19ABC29127EE282F00AEC4D1 /* LampView.swift in Sources */,
+				1978C4952802397300BB61A4 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

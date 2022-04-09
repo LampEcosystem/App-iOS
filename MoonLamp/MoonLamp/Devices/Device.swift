@@ -11,6 +11,7 @@ class Device: NSObject, ObservableObject {
     @Published var associationState = AssociationState()
     @Published var wifiState = WifiState()
     @Published var utilitystate = UtilityState()
+    @Published var deviceInfoState = DeviceInfoState()
     
     internal var characteristics = [CBUUID: CBCharacteristic]()
     
@@ -74,7 +75,7 @@ extension Device {
     static let MODEL_UUID = CBUUID(string: "2a24")
     static let SERIAL_UUID = CBUUID(string: "2a25")
     
-    struct DeviceInfo: Equatable {
+    struct DeviceInfoState: Equatable {
         var manufacturer = ""
         var model = ""
         var serial = ""
