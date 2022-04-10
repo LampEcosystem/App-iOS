@@ -8,6 +8,7 @@ import SwiftUI
 
 struct LampView: View {
     @ObservedObject var lamp: Lamp
+    @ObservedObject var lampService: LampService
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
@@ -15,9 +16,9 @@ struct LampView: View {
         VStack {
             ZStack(alignment: .bottom) {
                 Rectangle()
-                    .fill(lamp.state.color)
+                    .fill(lampService.state.color)
                     .edgesIgnoringSafeArea(.top)
-                Text("\(lamp.state.isConnected ? "Connected" : "Disconnected")")
+                Text("\(lampService.state.isConnected ? "Connected" : "Disconnected")")
                     .foregroundColor(.white)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: .infinity)
@@ -26,34 +27,28 @@ struct LampView: View {
             }
             
             VStack(alignment: .center, spacing: 20) {
-                GradientSlider(value: $lamp.state.hue,
-                               handleColor: lamp.state.baseHueColor,
+                GradientSlider(value: $lampService.state.hue,
+                               handleColor: lampService.state.baseHueColor,
                                trackColors: Color.rainbow()) { hueValue in
-                    
-                    trackSliderEvent("hue-slider", value: hueValue)
                 }
                 
-                GradientSlider(value: $lamp.state.saturation,
-                               handleColor: Color(hue: lamp.state.hue,
-                                                  saturation: lamp.state.saturation,
+                GradientSlider(value: $lampService.state.saturation,
+                               handleColor: Color(hue: lampService.state.hue,
+                                                  saturation: lampService.state.saturation,
                                                   brightness: 1.0),
-                               trackColors: [.white, lamp.state.baseHueColor]) { saturationValue in
-                    
-                    trackSliderEvent("saturation-slider", value: saturationValue)
+                               trackColors: [.white, lampService.state.baseHueColor]) { saturationValue in
                 }
                 
-                GradientSlider(value: $lamp.state.brightness,
-                               handleColor: Color(white: lamp.state.brightness),
+                GradientSlider(value: $lampService.state.brightness,
+                               handleColor: Color(white: lampService.state.brightness),
                                handleImage: Image(systemName: "sun.max"),
                                trackColors: [.black, .white]) { brightnessValue in
-                    
-                    trackSliderEvent("brightness-slider", value: brightnessValue)
                 }
-                .foregroundColor(Color(white: 1.0 - lamp.state.brightness))
+                .foregroundColor(Color(white: 1.0 - lampService.state.brightness))
             }.padding(.horizontal)
             
             Button(action: {
-                lamp.state.isOn.toggle()
+                lampService.state.isOn.toggle()
             }) {
                 HStack {
                     Spacer()
@@ -63,11 +58,11 @@ struct LampView: View {
                     Spacer()
                 }.padding()
             }
-            .foregroundColor(lamp.state.isOn ? lamp.state.color : .gray)
+            .foregroundColor(lampService.state.isOn ? lampService.state.color : .gray)
             .background(Color.black.edgesIgnoringSafeArea(.bottom))
             .frame(height: 100)
         }
-        .disabled(!lamp.state.isConnected)
+        .disabled(!lampService.state.isConnected)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action : {
             self.mode.wrappedValue.dismiss()
@@ -76,24 +71,26 @@ struct LampView: View {
                 .foregroundColor(.white)
                 .shadow(radius: 2.0)
         }, trailing:
-            NavigationLink(destination: WifiSettingsView(device: lamp)) {
+                                NavigationLink(destination: WifiSettingsView(lamp)) {
                 Image(systemName: "gear")
                     .imageScale(.large)
                     .foregroundColor(.white)
                     .shadow(radius: 2.0)
             })
-        .onAppear(perform: lamp.refresh)
+        .onAppear(perform: lampService.refresh)
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-            lamp.refresh()
+            lampService.refresh()
         }
     }
     
-    private func trackSliderEvent(_ sliderName: String, value: Double) {
+    init(_ lamp: Lamp) {
+        self.lamp = lamp
+        self.lampService = lamp.getService(LampService.SERVICE_UUID) as! LampService
     }
 }
 
 struct MoonLampView_Previews: PreviewProvider {
     static var previews: some View {
-        LampView(lamp: Lamp(name: "test lamp device"))
+        LampView(Lamp(name: "test lamp device"))
     }
 }

@@ -7,6 +7,7 @@ import Foundation
 import SwiftUI
 
 struct WifiSettingsView: View {
+    @ObservedObject var device: Device
     @ObservedObject var wifiService: WifiService
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
@@ -49,6 +50,10 @@ struct WifiSettingsView: View {
         
     }
     
+    init(_ device: Device) {
+        self.device = device
+        self.wifiService = device.getService(WifiService.SERVICE_UUID) as! WifiService
+    }
 }
 
 extension UIApplication {

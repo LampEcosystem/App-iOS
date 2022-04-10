@@ -80,6 +80,10 @@ class Device: NSObject, ObservableObject {
     func registerService(_ service: Service) {
         registerUUIDToService(service, uuid: service.uuid)
     }
+    
+    func getService(_ uuid: CBUUID) -> Service? {
+        return serviceUUIDMap[uuid]
+    }
 }
 
 extension Device: CBPeripheralDelegate {

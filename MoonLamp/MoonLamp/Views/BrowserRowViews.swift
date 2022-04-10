@@ -31,5 +31,10 @@ struct MoonLampRow: View {
             Spacer()
         }
     }
+    
+    init(_ device: MoonLamp) {
+        self.device = device
+        self.lampService = device.getService(LampService.SERVICE_UUID) as! LampService
+    }
 }
 
