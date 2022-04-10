@@ -16,7 +16,6 @@ class LampService: Service {
     static let ON_OFF_UUID = CBUUID(string: "0004A7D3-D8A4-4FEA-8174-1736E808C066")
     
     
-    
     @Published var state = LampState() {
         didSet {
             if oldValue != state {

@@ -79,7 +79,6 @@ extension DeviceManager: CBCentralManagerDelegate {
     private func scheduleStopScan() {
         Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { [weak self] _ in
             if (self?.anyDevicesFound() ?? false) {
-                print("found stuff")
                 self?.bluetoothManager.stopScan()
                 self?.isScanning = false
             } else {

@@ -17,4 +17,9 @@ class Lamp: Device {
     override init(devicePeripheral: CBPeripheral) {
         super.init(devicePeripheral: devicePeripheral)
     }
+    
+    override func registerServices() {
+        super.registerServices()
+        self.registerService(LampService(self, peripheral: devicePeripheral!))
+    }
 }

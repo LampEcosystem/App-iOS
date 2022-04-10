@@ -13,7 +13,7 @@ class Service: ObservableObject {
     var uuid: CBUUID
     var device: Device
     var peripheral: CBPeripheral
-    var uuids = [CBUUID]()
+    var uuids = Set<CBUUID>()
     var characteristics = [CBUUID: CBCharacteristic]()
     
     var skipNextDeviceUpdate = false
@@ -27,7 +27,6 @@ class Service: ObservableObject {
         self.device = device
         self.peripheral = peripheral
         self.uuid = serviceUUID
-        registerUUID(self.uuid)
     }
     
     func canProcessCharacteristic(_ characteristic: CBCharacteristic) -> Bool {
@@ -44,7 +43,7 @@ class Service: ObservableObject {
     }
     
     func registerUUID(_ uuid: CBUUID) {
-        uuids.append(uuid)
+        uuids.insert(uuid)
         device.registerUUIDToService(self, uuid: uuid)
     }
     

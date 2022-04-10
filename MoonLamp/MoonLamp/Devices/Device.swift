@@ -32,7 +32,6 @@ class Device: NSObject, ObservableObject {
     public func setupPeripheral() {
         if let devicePeripheral = devicePeripheral {
             devicePeripheral.delegate = self
-            registerBaseServices()
         }
     }
     
@@ -51,12 +50,11 @@ class Device: NSObject, ObservableObject {
         guard let peripheralName = devicePeripheral.name else {
             fatalError("Peripheral must have a name")
         }
-        
         self.devicePeripheral = devicePeripheral
         self.peripheralName = peripheralName
-        
         super.init()
         
+        self.registerServices()
         self.setupPeripheral()
     }
     
@@ -66,7 +64,7 @@ class Device: NSObject, ObservableObject {
         return managerConnected
     }
     
-    func registerBaseServices() {
+    func registerServices() {
         registerService(DeviceInfoService(self, peripheral: devicePeripheral!))
         registerService(UtilityService(self, peripheral: devicePeripheral!))
         registerService(WifiService(self, peripheral: devicePeripheral!))
