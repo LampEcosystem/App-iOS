@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct WifiState: ServiceState {
-    
+struct WifiState: ServiceState, Equatable {
+    var ssid = ""
+    var psk = ""
+    var wifiResponse = ""
 }

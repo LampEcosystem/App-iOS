@@ -71,7 +71,7 @@ extension DeviceManager: CBCentralManagerDelegate {
         if bluetoothManager.state == .poweredOn {
             isScanning = true
             print("Scanning for Devices")
-            bluetoothManager.scanForPeripherals(withServices: [Device.UTILITY_SERVICE_UUID])
+            bluetoothManager.scanForPeripherals(withServices: [DeviceInfoService.SERVICE_UUID])
             scheduleStopScan()
         }
     }
@@ -111,7 +111,7 @@ extension DeviceManager: CBCentralManagerDelegate {
 
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("Manager Connected to peripheral \(peripheral)")
-        peripheral.discoverServices([MoonLamp.LAMP_SERVICE_UUID, Device.WIFI_SERVICE_UUID, Device.ASSOCIATION_SERVICE_UUID, Device.UTILITY_SERVICE_UUID])
+        peripheral.discoverServices([LampService.SERVICE_UUID, WifiService.SERVICE_UUID, AssociationService.SERVICE_UUID, UtilityService.SERVICE_UUID])
     }
 
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {

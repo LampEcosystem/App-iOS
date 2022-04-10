@@ -7,7 +7,7 @@ import Foundation
 import SwiftUI
 
 struct WifiSettingsView: View {
-    @ObservedObject var device: Device
+    @ObservedObject var wifiService: WifiService
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
@@ -17,19 +17,19 @@ struct WifiSettingsView: View {
                 HStack {
                     Text("SSID:")
                         .padding()
-                    TextField("SSID", text: $device.wifiState.ssid)
+                    TextField("SSID", text: $wifiService.state.ssid)
                         .disableAutocorrection(true)
                 }
                 HStack {
                     Text("Password:")
                         .padding()
-                    SecureField("Password", text: $device.wifiState.psk)
+                    SecureField("Password", text: $wifiService.state.psk)
                         .disableAutocorrection(true)
                 }
-                Text(device.wifiState.wifiResponse)
+                Text(wifiService.state.wifiResponse)
                 
                 Button(action: {
-                    device.sendWifiUpdate()
+                    wifiService.sendWifiUpdate()
                     UIApplication.shared.endEditing()
                 }, label: {
                     Text("Save")
