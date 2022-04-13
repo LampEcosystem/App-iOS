@@ -93,15 +93,15 @@
 		1978C4A92802462500BB61A4 /* UtilityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityState.swift; sourceTree = "<group>"; };
 		1978C4AB2802462F00BB61A4 /* DeviceInfoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoState.swift; sourceTree = "<group>"; };
 		1978C4AE28024E2C00BB61A4 /* BTHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTHelper.swift; sourceTree = "<group>"; };
-		19ABC23C27ED57F800AEC4D1 /* MoonLamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonLamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ABC23C27ED57F800AEC4D1 /* TNGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ABC23F27ED57F800AEC4D1 /* MoonLampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampApp.swift; sourceTree = "<group>"; };
 		19ABC24327ED57F900AEC4D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19ABC24627ED57F900AEC4D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19ABC24827ED57F900AEC4D1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		19ABC24B27ED57F900AEC4D1 /* MoonLamp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoonLamp.xcdatamodel; sourceTree = "<group>"; };
-		19ABC25127ED57F900AEC4D1 /* MoonLampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonLampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ABC25127ED57F900AEC4D1 /* TNGLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNGLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ABC25527ED57F900AEC4D1 /* MoonLampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampTests.swift; sourceTree = "<group>"; };
-		19ABC25B27ED57F900AEC4D1 /* MoonLampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonLampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ABC25B27ED57F900AEC4D1 /* TNGLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNGLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ABC25F27ED57F900AEC4D1 /* MoonLampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampUITests.swift; sourceTree = "<group>"; };
 		19ABC26127ED57F900AEC4D1 /* MoonLampUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		19ABC26E27ED582F00AEC4D1 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
@@ -180,9 +180,9 @@
 		19ABC23327ED57F800AEC4D1 = {
 			isa = PBXGroup;
 			children = (
-				19ABC23E27ED57F800AEC4D1 /* MoonLamp */,
-				19ABC25427ED57F900AEC4D1 /* MoonLampTests */,
-				19ABC25E27ED57F900AEC4D1 /* MoonLampUITests */,
+				19ABC23E27ED57F800AEC4D1 /* TNGL */,
+				19ABC25427ED57F900AEC4D1 /* TNGLTests */,
+				19ABC25E27ED57F900AEC4D1 /* TNGLUITests */,
 				19ABC23D27ED57F800AEC4D1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -190,14 +190,14 @@
 		19ABC23D27ED57F800AEC4D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19ABC23C27ED57F800AEC4D1 /* MoonLamp.app */,
-				19ABC25127ED57F900AEC4D1 /* MoonLampTests.xctest */,
-				19ABC25B27ED57F900AEC4D1 /* MoonLampUITests.xctest */,
+				19ABC23C27ED57F800AEC4D1 /* TNGL.app */,
+				19ABC25127ED57F900AEC4D1 /* TNGLTests.xctest */,
+				19ABC25B27ED57F900AEC4D1 /* TNGLUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		19ABC23E27ED57F800AEC4D1 /* MoonLamp */ = {
+		19ABC23E27ED57F800AEC4D1 /* TNGL */ = {
 			isa = PBXGroup;
 			children = (
 				1978C49A28023FDE00BB61A4 /* State */,
@@ -212,7 +212,7 @@
 				19ABC24527ED57F900AEC4D1 /* Preview Content */,
 				19ABC26E27ED582F00AEC4D1 /* DeviceManager.swift */,
 			);
-			path = MoonLamp;
+			path = TNGL;
 			sourceTree = "<group>";
 		};
 		19ABC24527ED57F900AEC4D1 /* Preview Content */ = {
@@ -223,21 +223,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		19ABC25427ED57F900AEC4D1 /* MoonLampTests */ = {
+		19ABC25427ED57F900AEC4D1 /* TNGLTests */ = {
 			isa = PBXGroup;
 			children = (
 				19ABC25527ED57F900AEC4D1 /* MoonLampTests.swift */,
 			);
-			path = MoonLampTests;
+			path = TNGLTests;
 			sourceTree = "<group>";
 		};
-		19ABC25E27ED57F900AEC4D1 /* MoonLampUITests */ = {
+		19ABC25E27ED57F900AEC4D1 /* TNGLUITests */ = {
 			isa = PBXGroup;
 			children = (
 				19ABC25F27ED57F900AEC4D1 /* MoonLampUITests.swift */,
 				19ABC26127ED57F900AEC4D1 /* MoonLampUITestsLaunchTests.swift */,
 			);
-			path = MoonLampUITests;
+			path = TNGLUITests;
 			sourceTree = "<group>";
 		};
 		19ABC27627EE095900AEC4D1 /* Devices */ = {
@@ -340,9 +340,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		19ABC23B27ED57F800AEC4D1 /* MoonLamp */ = {
+		19ABC23B27ED57F800AEC4D1 /* TNGL */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19ABC26527ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLamp" */;
+			buildConfigurationList = 19ABC26527ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "TNGL" */;
 			buildPhases = (
 				19ABC23827ED57F800AEC4D1 /* Sources */,
 				19ABC23927ED57F800AEC4D1 /* Frameworks */,
@@ -352,14 +352,14 @@
 			);
 			dependencies = (
 			);
-			name = MoonLamp;
+			name = TNGL;
 			productName = MoonLamp;
-			productReference = 19ABC23C27ED57F800AEC4D1 /* MoonLamp.app */;
+			productReference = 19ABC23C27ED57F800AEC4D1 /* TNGL.app */;
 			productType = "com.apple.product-type.application";
 		};
-		19ABC25027ED57F900AEC4D1 /* MoonLampTests */ = {
+		19ABC25027ED57F900AEC4D1 /* TNGLTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19ABC26827ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLampTests" */;
+			buildConfigurationList = 19ABC26827ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "TNGLTests" */;
 			buildPhases = (
 				19ABC24D27ED57F900AEC4D1 /* Sources */,
 				19ABC24E27ED57F900AEC4D1 /* Frameworks */,
@@ -370,14 +370,14 @@
 			dependencies = (
 				19ABC25327ED57F900AEC4D1 /* PBXTargetDependency */,
 			);
-			name = MoonLampTests;
+			name = TNGLTests;
 			productName = MoonLampTests;
-			productReference = 19ABC25127ED57F900AEC4D1 /* MoonLampTests.xctest */;
+			productReference = 19ABC25127ED57F900AEC4D1 /* TNGLTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		19ABC25A27ED57F900AEC4D1 /* MoonLampUITests */ = {
+		19ABC25A27ED57F900AEC4D1 /* TNGLUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19ABC26B27ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLampUITests" */;
+			buildConfigurationList = 19ABC26B27ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "TNGLUITests" */;
 			buildPhases = (
 				19ABC25727ED57F900AEC4D1 /* Sources */,
 				19ABC25827ED57F900AEC4D1 /* Frameworks */,
@@ -388,9 +388,9 @@
 			dependencies = (
 				19ABC25D27ED57F900AEC4D1 /* PBXTargetDependency */,
 			);
-			name = MoonLampUITests;
+			name = TNGLUITests;
 			productName = MoonLampUITests;
-			productReference = 19ABC25B27ED57F900AEC4D1 /* MoonLampUITests.xctest */;
+			productReference = 19ABC25B27ED57F900AEC4D1 /* TNGLUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -416,7 +416,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 19ABC23727ED57F800AEC4D1 /* Build configuration list for PBXProject "MoonLamp" */;
+			buildConfigurationList = 19ABC23727ED57F800AEC4D1 /* Build configuration list for PBXProject "TNGL" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -429,9 +429,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				19ABC23B27ED57F800AEC4D1 /* MoonLamp */,
-				19ABC25027ED57F900AEC4D1 /* MoonLampTests */,
-				19ABC25A27ED57F900AEC4D1 /* MoonLampUITests */,
+				19ABC23B27ED57F800AEC4D1 /* TNGL */,
+				19ABC25027ED57F900AEC4D1 /* TNGLTests */,
+				19ABC25A27ED57F900AEC4D1 /* TNGLUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -540,12 +540,12 @@
 /* Begin PBXTargetDependency section */
 		19ABC25327ED57F900AEC4D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19ABC23B27ED57F800AEC4D1 /* MoonLamp */;
+			target = 19ABC23B27ED57F800AEC4D1 /* TNGL */;
 			targetProxy = 19ABC25227ED57F900AEC4D1 /* PBXContainerItemProxy */;
 		};
 		19ABC25D27ED57F900AEC4D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19ABC23B27ED57F800AEC4D1 /* MoonLamp */;
+			target = 19ABC23B27ED57F800AEC4D1 /* TNGL */;
 			targetProxy = 19ABC25C27ED57F900AEC4D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -685,13 +685,14 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cptingle.MoonLamp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cptingle.TNGL;
+				PRODUCT_NAME = TNGL;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -716,13 +717,14 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cptingle.MoonLamp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cptingle.TNGL;
+				PRODUCT_NAME = TNGL;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -745,7 +747,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoonLamp.app/MoonLamp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TNGL.app/TNGL";
 			};
 			name = Debug;
 		};
@@ -765,7 +767,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoonLamp.app/MoonLamp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TNGL.app/TNGL";
 			};
 			name = Release;
 		};
@@ -808,7 +810,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		19ABC23727ED57F800AEC4D1 /* Build configuration list for PBXProject "MoonLamp" */ = {
+		19ABC23727ED57F800AEC4D1 /* Build configuration list for PBXProject "TNGL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19ABC26327ED57F900AEC4D1 /* Debug */,
@@ -817,7 +819,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19ABC26527ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLamp" */ = {
+		19ABC26527ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "TNGL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19ABC26627ED57F900AEC4D1 /* Debug */,
@@ -826,7 +828,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19ABC26827ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLampTests" */ = {
+		19ABC26827ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "TNGLTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19ABC26927ED57F900AEC4D1 /* Debug */,
@@ -835,7 +837,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19ABC26B27ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "MoonLampUITests" */ = {
+		19ABC26B27ED57F900AEC4D1 /* Build configuration list for PBXNativeTarget "TNGLUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19ABC26C27ED57F900AEC4D1 /* Debug */,
