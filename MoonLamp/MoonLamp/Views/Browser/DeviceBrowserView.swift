@@ -20,9 +20,7 @@ struct DeviceBroswerView: View {
                         Section(header: Text(type)) {
                             ForEach(deviceManager.foundDevices[type] ?? [], id: \.peripheralName) { device in
                                 if (device is MoonLamp) {
-                                    NavigationLink(destination: LampView(device as! Lamp)) {
-                                        MoonLampRow(device as! MoonLamp)
-                                    }
+                                    MoonLampBrowserRow(device as! MoonLamp)
                                 } else {
 //                                    NavigationLink(destination: LampiView(lamp: device as! Lampi)) {
 //                                        LampiRow(device: device as! Lampi)

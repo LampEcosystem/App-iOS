@@ -7,7 +7,7 @@ import Foundation
 import CoreBluetooth
 import Combine
 
-class Lamp: Device {
+class RGBLamp: Device {
     
     
     override init(name: String) {
@@ -20,6 +20,6 @@ class Lamp: Device {
     
     override func registerServices() {
         super.registerServices()
-        self.registerService(LampService(self, peripheral: devicePeripheral!))
+        self.registerService(RGBLampService(self, peripheral: devicePeripheral!))
     }
 }

@@ -8,6 +8,6 @@ import CoreBluetooth
 import Combine
 import SwiftUI
 
-class MoonLamp: Lamp {
+class MoonLamp: RGBLamp {
     
 }

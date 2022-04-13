@@ -9,14 +9,14 @@ import Foundation
 import CoreBluetooth
 import SwiftUI
 
-class LampService: Service {
+class RGBLampService: Service {
     static let SERVICE_UUID = CBUUID(string: "0001A7D3-D8A4-4FEA-8174-1736E808C066")
     static let HSV_UUID = CBUUID(string: "0002A7D3-D8A4-4FEA-8174-1736E808C066")
     static let BRIGHTNESS_UUID = CBUUID(string: "0003A7D3-D8A4-4FEA-8174-1736E808C066")
     static let ON_OFF_UUID = CBUUID(string: "0004A7D3-D8A4-4FEA-8174-1736E808C066")
     
     
-    @Published var state = LampState() {
+    @Published var state = RGBLampState() {
         didSet {
             if oldValue != state {
                 updateDevice()
@@ -28,20 +28,20 @@ class LampService: Service {
     }
     
     init(_ device: Device, peripheral: CBPeripheral) {
-        super.init(device, peripheral: peripheral, serviceUUID: LampService.SERVICE_UUID)
-        registerUUID(LampService.HSV_UUID)
-        registerUUID(LampService.BRIGHTNESS_UUID)
-        registerUUID(LampService.ON_OFF_UUID)
+        super.init(device, peripheral: peripheral, serviceUUID: RGBLampService.SERVICE_UUID)
+        registerUUID(RGBLampService.HSV_UUID)
+        registerUUID(RGBLampService.BRIGHTNESS_UUID)
+        registerUUID(RGBLampService.ON_OFF_UUID)
     }
     
     func refresh() {
-        if let hsvCharacteristic = characteristics[LampService.HSV_UUID] {
+        if let hsvCharacteristic = characteristics[RGBLampService.HSV_UUID] {
             peripheral.readValue(for: hsvCharacteristic)
         }
-        if let brightnessCharacteristic = characteristics[LampService.BRIGHTNESS_UUID] {
+        if let brightnessCharacteristic = characteristics[RGBLampService.BRIGHTNESS_UUID] {
             peripheral.readValue(for: brightnessCharacteristic)
         }
-        if let onOffCharacteristic = characteristics[LampService.ON_OFF_UUID] {
+        if let onOffCharacteristic = characteristics[RGBLampService.ON_OFF_UUID] {
             peripheral.readValue(for: onOffCharacteristic)
         }
     }
@@ -69,7 +69,7 @@ class LampService: Service {
               !updatedValue.isEmpty else { return }
 
         switch characteristic.uuid {
-        case LampService.HSV_UUID:
+        case RGBLampService.HSV_UUID:
 
             var newState = state
 
@@ -79,10 +79,10 @@ class LampService: Service {
 
             state = newState
 
-        case LampService.BRIGHTNESS_UUID:
+        case RGBLampService.BRIGHTNESS_UUID:
             state.brightness = parseBrightness(for: updatedValue)
 
-        case LampService.ON_OFF_UUID:
+        case RGBLampService.ON_OFF_UUID:
             state.isOn = parseOnOff(for: updatedValue)
 
         default:
@@ -91,7 +91,7 @@ class LampService: Service {
     }
 }
 
-extension LampService {
+extension RGBLampService {
     internal func updateDevice(force: Bool = false) {
         if state.isConnected && (force || !shouldSkipUpdateDevice) {
             pendingBluetoothUpdate = true
@@ -108,7 +108,7 @@ extension LampService {
     }
     
     internal func writeHSV() {
-        if let hsvCharacteristic = characteristics[LampService.HSV_UUID] {
+        if let hsvCharacteristic = characteristics[RGBLampService.HSV_UUID] {
             var hsv: UInt32 = 0
             let hueInt = UInt32(state.hue * 255.0)
             let satInt = UInt32(state.saturation * 255.0)
@@ -124,7 +124,7 @@ extension LampService {
     }
     
     internal func writeBrightness() {
-        if let brightnessCharacteristic = characteristics[LampService.BRIGHTNESS_UUID] {
+        if let brightnessCharacteristic = characteristics[RGBLampService.BRIGHTNESS_UUID] {
             var brightnessChar = UInt8(state.brightness * 255.0)
             let data = Data(bytes: &brightnessChar, count: 1)
             peripheral.writeValue(data, for: brightnessCharacteristic, type: .withResponse)
@@ -132,14 +132,14 @@ extension LampService {
     }
     
     internal func writeOnOff() {
-        if let onOffCharacteristic = characteristics[LampService.ON_OFF_UUID] {
+        if let onOffCharacteristic = characteristics[RGBLampService.ON_OFF_UUID] {
             let data = Data(bytes: &state.isOn, count: 1)
             peripheral.writeValue(data, for: onOffCharacteristic, type: .withResponse)
         }
     }
 }
 
-extension LampService {
+extension RGBLampService {
     private func parseOnOff(for value: Data) -> Bool {
         return value.first == 1
     }

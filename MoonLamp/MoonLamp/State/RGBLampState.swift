@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct LampState: ServiceState, Equatable {
+struct RGBLampState: ServiceState, Equatable {
     var isConnected = false
     var hue: Double = 0.0
     var saturation: Double = 1.0

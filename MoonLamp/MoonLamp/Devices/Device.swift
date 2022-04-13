@@ -26,9 +26,6 @@ class Device: NSObject, ObservableObject {
     public var peripheralName: String
     public var managerConnected = false
     
-    public var skipNextDeviceUpdate = false
-    public var pendingBluetoothUpdate = false
-    
     public func setupPeripheral() {
         if let devicePeripheral = devicePeripheral {
             devicePeripheral.delegate = self
@@ -86,7 +83,6 @@ class Device: NSObject, ObservableObject {
 
 extension Device: CBPeripheralDelegate {
     
-    
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         guard let services = peripheral.services else { return }
         
@@ -111,7 +107,4 @@ extension Device: CBPeripheralDelegate {
         
         service.didUpdateValueFor(peripheral, characteristic: characteristic, error: error)
     }
-    
-
-    
 }

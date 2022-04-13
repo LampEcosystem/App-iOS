@@ -110,7 +110,7 @@ extension DeviceManager: CBCentralManagerDelegate {
 
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("Manager Connected to peripheral \(peripheral)")
-        peripheral.discoverServices([LampService.SERVICE_UUID, WifiService.SERVICE_UUID, AssociationService.SERVICE_UUID, UtilityService.SERVICE_UUID])
+        peripheral.discoverServices([RGBLampService.SERVICE_UUID, WifiService.SERVICE_UUID, AssociationService.SERVICE_UUID, UtilityService.SERVICE_UUID])
     }
 
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {

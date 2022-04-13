@@ -12,16 +12,15 @@
 		1978C49928023F2000BB61A4 /* WifiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C49828023F2000BB61A4 /* WifiState.swift */; };
 		1978C49C28023FF200BB61A4 /* WifiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C49B28023FF200BB61A4 /* WifiService.swift */; };
 		1978C49E280245D800BB61A4 /* DeviceInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C49D280245D800BB61A4 /* DeviceInfoService.swift */; };
-		1978C4A0280245DF00BB61A4 /* LampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C49F280245DF00BB61A4 /* LampService.swift */; };
+		1978C4A0280245DF00BB61A4 /* RGBLampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C49F280245DF00BB61A4 /* RGBLampService.swift */; };
 		1978C4A2280245E600BB61A4 /* AssociationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C4A1280245E600BB61A4 /* AssociationService.swift */; };
 		1978C4A42802460200BB61A4 /* UtilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C4A32802460200BB61A4 /* UtilityService.swift */; };
 		1978C4A62802460F00BB61A4 /* AssociationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C4A52802460F00BB61A4 /* AssociationState.swift */; };
-		1978C4A82802461900BB61A4 /* LampState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C4A72802461900BB61A4 /* LampState.swift */; };
+		1978C4A82802461900BB61A4 /* RGBLampState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C4A72802461900BB61A4 /* RGBLampState.swift */; };
 		1978C4AA2802462500BB61A4 /* UtilityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C4A92802462500BB61A4 /* UtilityState.swift */; };
 		1978C4AC2802462F00BB61A4 /* DeviceInfoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C4AB2802462F00BB61A4 /* DeviceInfoState.swift */; };
 		1978C4AF28024E2C00BB61A4 /* BTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1978C4AE28024E2C00BB61A4 /* BTHelper.swift */; };
 		19ABC24027ED57F800AEC4D1 /* MoonLampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC23F27ED57F800AEC4D1 /* MoonLampApp.swift */; };
-		19ABC24227ED57F800AEC4D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC24127ED57F800AEC4D1 /* ContentView.swift */; };
 		19ABC24427ED57F900AEC4D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ABC24327ED57F900AEC4D1 /* Assets.xcassets */; };
 		19ABC24727ED57F900AEC4D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ABC24627ED57F900AEC4D1 /* Preview Assets.xcassets */; };
 		19ABC24927ED57F900AEC4D1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC24827ED57F900AEC4D1 /* Persistence.swift */; };
@@ -50,18 +49,17 @@
 		19ABC28927EE262400AEC4D1 /* WifiSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */; };
 		19ABC28A27EE262400AEC4D1 /* WifiSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */; };
 		19ABC28B27EE262400AEC4D1 /* WifiSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */; };
-		19ABC28D27EE26AD00AEC4D1 /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28C27EE26AD00AEC4D1 /* Lamp.swift */; };
-		19ABC28E27EE26AD00AEC4D1 /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28C27EE26AD00AEC4D1 /* Lamp.swift */; };
-		19ABC28F27EE26AD00AEC4D1 /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28C27EE26AD00AEC4D1 /* Lamp.swift */; };
-		19ABC29127EE282F00AEC4D1 /* LampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29027EE282F00AEC4D1 /* LampView.swift */; };
-		19ABC29227EE282F00AEC4D1 /* LampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29027EE282F00AEC4D1 /* LampView.swift */; };
-		19ABC29327EE282F00AEC4D1 /* LampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29027EE282F00AEC4D1 /* LampView.swift */; };
+		19ABC28D27EE26AD00AEC4D1 /* RGBLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28C27EE26AD00AEC4D1 /* RGBLamp.swift */; };
+		19ABC28E27EE26AD00AEC4D1 /* RGBLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28C27EE26AD00AEC4D1 /* RGBLamp.swift */; };
+		19ABC28F27EE26AD00AEC4D1 /* RGBLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC28C27EE26AD00AEC4D1 /* RGBLamp.swift */; };
+		19ABC29127EE282F00AEC4D1 /* RGBLampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29027EE282F00AEC4D1 /* RGBLampView.swift */; };
+		19ABC29227EE282F00AEC4D1 /* RGBLampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29027EE282F00AEC4D1 /* RGBLampView.swift */; };
+		19ABC29327EE282F00AEC4D1 /* RGBLampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29027EE282F00AEC4D1 /* RGBLampView.swift */; };
 		19ABC29527EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */; };
 		19ABC29627EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */; };
 		19ABC29727EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */; };
-		19ABC29927EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29827EE28FF00AEC4D1 /* BrowserRowViews.swift */; };
-		19ABC29A27EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29827EE28FF00AEC4D1 /* BrowserRowViews.swift */; };
-		19ABC29B27EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABC29827EE28FF00AEC4D1 /* BrowserRowViews.swift */; };
+		19D398A42806394600D66046 /* MoonLampBrowserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D398A32806394500D66046 /* MoonLampBrowserRowView.swift */; };
+		19D398AF280646A400D66046 /* ImageSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D398AE280646A400D66046 /* ImageSquare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,17 +85,16 @@
 		1978C49828023F2000BB61A4 /* WifiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiState.swift; sourceTree = "<group>"; };
 		1978C49B28023FF200BB61A4 /* WifiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiService.swift; sourceTree = "<group>"; };
 		1978C49D280245D800BB61A4 /* DeviceInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoService.swift; sourceTree = "<group>"; };
-		1978C49F280245DF00BB61A4 /* LampService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampService.swift; sourceTree = "<group>"; };
+		1978C49F280245DF00BB61A4 /* RGBLampService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBLampService.swift; sourceTree = "<group>"; };
 		1978C4A1280245E600BB61A4 /* AssociationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociationService.swift; sourceTree = "<group>"; };
 		1978C4A32802460200BB61A4 /* UtilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityService.swift; sourceTree = "<group>"; };
 		1978C4A52802460F00BB61A4 /* AssociationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociationState.swift; sourceTree = "<group>"; };
-		1978C4A72802461900BB61A4 /* LampState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampState.swift; sourceTree = "<group>"; };
+		1978C4A72802461900BB61A4 /* RGBLampState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBLampState.swift; sourceTree = "<group>"; };
 		1978C4A92802462500BB61A4 /* UtilityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityState.swift; sourceTree = "<group>"; };
 		1978C4AB2802462F00BB61A4 /* DeviceInfoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoState.swift; sourceTree = "<group>"; };
 		1978C4AE28024E2C00BB61A4 /* BTHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTHelper.swift; sourceTree = "<group>"; };
 		19ABC23C27ED57F800AEC4D1 /* MoonLamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonLamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ABC23F27ED57F800AEC4D1 /* MoonLampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampApp.swift; sourceTree = "<group>"; };
-		19ABC24127ED57F800AEC4D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19ABC24327ED57F900AEC4D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19ABC24627ED57F900AEC4D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19ABC24827ED57F900AEC4D1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -114,10 +111,11 @@
 		19ABC28027EE25C300AEC4D1 /* GradientSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
 		19ABC28427EE25E500AEC4D1 /* LampWifiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampWifiView.swift; sourceTree = "<group>"; };
 		19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiSettingsView.swift; sourceTree = "<group>"; };
-		19ABC28C27EE26AD00AEC4D1 /* Lamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
-		19ABC29027EE282F00AEC4D1 /* LampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LampView.swift; sourceTree = "<group>"; };
+		19ABC28C27EE26AD00AEC4D1 /* RGBLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBLamp.swift; sourceTree = "<group>"; };
+		19ABC29027EE282F00AEC4D1 /* RGBLampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBLampView.swift; sourceTree = "<group>"; };
 		19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBrowserView.swift; sourceTree = "<group>"; };
-		19ABC29827EE28FF00AEC4D1 /* BrowserRowViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserRowViews.swift; sourceTree = "<group>"; };
+		19D398A32806394500D66046 /* MoonLampBrowserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLampBrowserRowView.swift; sourceTree = "<group>"; };
+		19D398AE280646A400D66046 /* ImageSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSquare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,11 +146,10 @@
 		1978C4932802378200BB61A4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				1978C49A28023FDE00BB61A4 /* State */,
 				1978C4942802397300BB61A4 /* Service.swift */,
 				1978C49B28023FF200BB61A4 /* WifiService.swift */,
 				1978C49D280245D800BB61A4 /* DeviceInfoService.swift */,
-				1978C49F280245DF00BB61A4 /* LampService.swift */,
+				1978C49F280245DF00BB61A4 /* RGBLampService.swift */,
 				1978C4A1280245E600BB61A4 /* AssociationService.swift */,
 				1978C4A32802460200BB61A4 /* UtilityService.swift */,
 			);
@@ -165,7 +162,7 @@
 				1978C49628023F0100BB61A4 /* ServiceState.swift */,
 				1978C49828023F2000BB61A4 /* WifiState.swift */,
 				1978C4A52802460F00BB61A4 /* AssociationState.swift */,
-				1978C4A72802461900BB61A4 /* LampState.swift */,
+				1978C4A72802461900BB61A4 /* RGBLampState.swift */,
 				1978C4A92802462500BB61A4 /* UtilityState.swift */,
 				1978C4AB2802462F00BB61A4 /* DeviceInfoState.swift */,
 			);
@@ -203,12 +200,12 @@
 		19ABC23E27ED57F800AEC4D1 /* MoonLamp */ = {
 			isa = PBXGroup;
 			children = (
+				1978C49A28023FDE00BB61A4 /* State */,
 				1978C4AD28024E2300BB61A4 /* Helpers */,
 				1978C4932802378200BB61A4 /* Services */,
 				19ABC27B27EE244E00AEC4D1 /* Views */,
 				19ABC27627EE095900AEC4D1 /* Devices */,
 				19ABC23F27ED57F800AEC4D1 /* MoonLampApp.swift */,
-				19ABC24127ED57F800AEC4D1 /* ContentView.swift */,
 				19ABC24327ED57F900AEC4D1 /* Assets.xcassets */,
 				19ABC24827ED57F900AEC4D1 /* Persistence.swift */,
 				19ABC24A27ED57F900AEC4D1 /* MoonLamp.xcdatamodeld */,
@@ -248,7 +245,7 @@
 			children = (
 				19ABC27227ED629000AEC4D1 /* Device.swift */,
 				19ABC27727EE096C00AEC4D1 /* MoonLamp.swift */,
-				19ABC28C27EE26AD00AEC4D1 /* Lamp.swift */,
+				19ABC28C27EE26AD00AEC4D1 /* RGBLamp.swift */,
 			);
 			path = Devices;
 			sourceTree = "<group>";
@@ -256,15 +253,88 @@
 		19ABC27B27EE244E00AEC4D1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				19ABC27C27EE247C00AEC4D1 /* MoonLampView.swift */,
-				19ABC29027EE282F00AEC4D1 /* LampView.swift */,
-				19ABC28027EE25C300AEC4D1 /* GradientSlider.swift */,
-				19ABC28427EE25E500AEC4D1 /* LampWifiView.swift */,
-				19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */,
-				19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */,
-				19ABC29827EE28FF00AEC4D1 /* BrowserRowViews.swift */,
+				19D398AB2806437300D66046 /* Browser */,
+				19D398A22806392900D66046 /* Devices */,
+				19D398A7280639C500D66046 /* Services */,
+				19D398A6280639BB00D66046 /* Utility */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		19D398A12806391C00D66046 /* MoonLamp */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC27C27EE247C00AEC4D1 /* MoonLampView.swift */,
+				19D398A32806394500D66046 /* MoonLampBrowserRowView.swift */,
+			);
+			path = MoonLamp;
+			sourceTree = "<group>";
+		};
+		19D398A22806392900D66046 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				19D398A12806391C00D66046 /* MoonLamp */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		19D398A5280639A000D66046 /* RGBLamp */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC29027EE282F00AEC4D1 /* RGBLampView.swift */,
+			);
+			path = RGBLamp;
+			sourceTree = "<group>";
+		};
+		19D398A6280639BB00D66046 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC28027EE25C300AEC4D1 /* GradientSlider.swift */,
+				19D398AE280646A400D66046 /* ImageSquare.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		19D398A7280639C500D66046 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				19D398AA28063D1800D66046 /* Utility */,
+				19D398A928063D1100D66046 /* Association */,
+				19D398A8280639DD00D66046 /* WiFi */,
+				19D398A5280639A000D66046 /* RGBLamp */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		19D398A8280639DD00D66046 /* WiFi */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC28827EE262400AEC4D1 /* WifiSettingsView.swift */,
+				19ABC28427EE25E500AEC4D1 /* LampWifiView.swift */,
+			);
+			path = WiFi;
+			sourceTree = "<group>";
+		};
+		19D398A928063D1100D66046 /* Association */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Association;
+			sourceTree = "<group>";
+		};
+		19D398AA28063D1800D66046 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		19D398AB2806437300D66046 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				19ABC29427EE28BB00AEC4D1 /* DeviceBrowserView.swift */,
+			);
+			path = Browser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,29 +469,29 @@
 			files = (
 				19ABC27D27EE247C00AEC4D1 /* MoonLampView.swift in Sources */,
 				19ABC28127EE25C300AEC4D1 /* GradientSlider.swift in Sources */,
+				19D398A42806394600D66046 /* MoonLampBrowserRowView.swift in Sources */,
 				1978C49928023F2000BB61A4 /* WifiState.swift in Sources */,
 				1978C4A42802460200BB61A4 /* UtilityService.swift in Sources */,
 				19ABC24C27ED57F900AEC4D1 /* MoonLamp.xcdatamodeld in Sources */,
 				19ABC28527EE25E500AEC4D1 /* LampWifiView.swift in Sources */,
 				1978C4A2280245E600BB61A4 /* AssociationService.swift in Sources */,
 				19ABC24927ED57F900AEC4D1 /* Persistence.swift in Sources */,
-				19ABC29927EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */,
 				19ABC27827EE096C00AEC4D1 /* MoonLamp.swift in Sources */,
 				1978C49C28023FF200BB61A4 /* WifiService.swift in Sources */,
 				1978C4AF28024E2C00BB61A4 /* BTHelper.swift in Sources */,
-				19ABC24227ED57F800AEC4D1 /* ContentView.swift in Sources */,
 				19ABC27327ED629000AEC4D1 /* Device.swift in Sources */,
 				1978C49728023F0100BB61A4 /* ServiceState.swift in Sources */,
 				19ABC28927EE262400AEC4D1 /* WifiSettingsView.swift in Sources */,
-				1978C4A0280245DF00BB61A4 /* LampService.swift in Sources */,
+				1978C4A0280245DF00BB61A4 /* RGBLampService.swift in Sources */,
 				1978C4AC2802462F00BB61A4 /* DeviceInfoState.swift in Sources */,
 				19ABC29527EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */,
 				19ABC26F27ED582F00AEC4D1 /* DeviceManager.swift in Sources */,
 				19ABC24027ED57F800AEC4D1 /* MoonLampApp.swift in Sources */,
-				1978C4A82802461900BB61A4 /* LampState.swift in Sources */,
+				1978C4A82802461900BB61A4 /* RGBLampState.swift in Sources */,
 				1978C4AA2802462500BB61A4 /* UtilityState.swift in Sources */,
-				19ABC28D27EE26AD00AEC4D1 /* Lamp.swift in Sources */,
-				19ABC29127EE282F00AEC4D1 /* LampView.swift in Sources */,
+				19ABC28D27EE26AD00AEC4D1 /* RGBLamp.swift in Sources */,
+				19ABC29127EE282F00AEC4D1 /* RGBLampView.swift in Sources */,
+				19D398AF280646A400D66046 /* ImageSquare.swift in Sources */,
 				1978C4952802397300BB61A4 /* Service.swift in Sources */,
 				1978C49E280245D800BB61A4 /* DeviceInfoService.swift in Sources */,
 				1978C4A62802460F00BB61A4 /* AssociationState.swift in Sources */,
@@ -434,13 +504,12 @@
 			files = (
 				19ABC27927EE096C00AEC4D1 /* MoonLamp.swift in Sources */,
 				19ABC27427ED629000AEC4D1 /* Device.swift in Sources */,
-				19ABC29A27EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */,
-				19ABC29227EE282F00AEC4D1 /* LampView.swift in Sources */,
+				19ABC29227EE282F00AEC4D1 /* RGBLampView.swift in Sources */,
 				19ABC29627EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */,
 				19ABC27E27EE247C00AEC4D1 /* MoonLampView.swift in Sources */,
 				19ABC25627ED57F900AEC4D1 /* MoonLampTests.swift in Sources */,
 				19ABC28A27EE262400AEC4D1 /* WifiSettingsView.swift in Sources */,
-				19ABC28E27EE26AD00AEC4D1 /* Lamp.swift in Sources */,
+				19ABC28E27EE26AD00AEC4D1 /* RGBLamp.swift in Sources */,
 				19ABC28227EE25C300AEC4D1 /* GradientSlider.swift in Sources */,
 				19ABC28627EE25E500AEC4D1 /* LampWifiView.swift in Sources */,
 				19ABC27027ED582F00AEC4D1 /* DeviceManager.swift in Sources */,
@@ -454,13 +523,12 @@
 				19ABC27F27EE247C00AEC4D1 /* MoonLampView.swift in Sources */,
 				19ABC29727EE28BB00AEC4D1 /* DeviceBrowserView.swift in Sources */,
 				19ABC28727EE25E500AEC4D1 /* LampWifiView.swift in Sources */,
-				19ABC29B27EE28FF00AEC4D1 /* BrowserRowViews.swift in Sources */,
 				19ABC28B27EE262400AEC4D1 /* WifiSettingsView.swift in Sources */,
 				19ABC27A27EE096C00AEC4D1 /* MoonLamp.swift in Sources */,
 				19ABC26227ED57F900AEC4D1 /* MoonLampUITestsLaunchTests.swift in Sources */,
-				19ABC28F27EE26AD00AEC4D1 /* Lamp.swift in Sources */,
+				19ABC28F27EE26AD00AEC4D1 /* RGBLamp.swift in Sources */,
 				19ABC27127ED582F00AEC4D1 /* DeviceManager.swift in Sources */,
-				19ABC29327EE282F00AEC4D1 /* LampView.swift in Sources */,
+				19ABC29327EE282F00AEC4D1 /* RGBLampView.swift in Sources */,
 				19ABC26027ED57F900AEC4D1 /* MoonLampUITests.swift in Sources */,
 				19ABC27527ED629000AEC4D1 /* Device.swift in Sources */,
 				19ABC28327EE25C300AEC4D1 /* GradientSlider.swift in Sources */,

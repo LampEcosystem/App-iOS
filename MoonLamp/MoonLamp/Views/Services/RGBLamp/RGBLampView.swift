@@ -6,9 +6,9 @@
 import Foundation
 import SwiftUI
 
-struct LampView: View {
-    @ObservedObject var lamp: Lamp
-    @ObservedObject var lampService: LampService
+struct RGBLampView: View {
+    @ObservedObject var lamp: RGBLamp
+    @ObservedObject var rgbLampService: RGBLampService
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
@@ -16,9 +16,9 @@ struct LampView: View {
         VStack {
             ZStack(alignment: .bottom) {
                 Rectangle()
-                    .fill(lampService.state.color)
+                    .fill(rgbLampService.state.color)
                     .edgesIgnoringSafeArea(.top)
-                Text("\(lampService.state.isConnected ? "Connected" : "Disconnected")")
+                Text("\(rgbLampService.state.isConnected ? "Connected" : "Disconnected")")
                     .foregroundColor(.white)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: .infinity)
@@ -27,28 +27,28 @@ struct LampView: View {
             }
             
             VStack(alignment: .center, spacing: 20) {
-                GradientSlider(value: $lampService.state.hue,
-                               handleColor: lampService.state.baseHueColor,
+                GradientSlider(value: $rgbLampService.state.hue,
+                               handleColor: rgbLampService.state.baseHueColor,
                                trackColors: Color.rainbow()) { hueValue in
                 }
                 
-                GradientSlider(value: $lampService.state.saturation,
-                               handleColor: Color(hue: lampService.state.hue,
-                                                  saturation: lampService.state.saturation,
+                GradientSlider(value: $rgbLampService.state.saturation,
+                               handleColor: Color(hue: rgbLampService.state.hue,
+                                                  saturation: rgbLampService.state.saturation,
                                                   brightness: 1.0),
-                               trackColors: [.white, lampService.state.baseHueColor]) { saturationValue in
+                               trackColors: [.white, rgbLampService.state.baseHueColor]) { saturationValue in
                 }
                 
-                GradientSlider(value: $lampService.state.brightness,
-                               handleColor: Color(white: lampService.state.brightness),
+                GradientSlider(value: $rgbLampService.state.brightness,
+                               handleColor: Color(white: rgbLampService.state.brightness),
                                handleImage: Image(systemName: "sun.max"),
                                trackColors: [.black, .white]) { brightnessValue in
                 }
-                .foregroundColor(Color(white: 1.0 - lampService.state.brightness))
+                .foregroundColor(Color(white: 1.0 - rgbLampService.state.brightness))
             }.padding(.horizontal)
             
             Button(action: {
-                lampService.state.isOn.toggle()
+                rgbLampService.state.isOn.toggle()
             }) {
                 HStack {
                     Spacer()
@@ -58,11 +58,11 @@ struct LampView: View {
                     Spacer()
                 }.padding()
             }
-            .foregroundColor(lampService.state.isOn ? lampService.state.color : .gray)
+            .foregroundColor(rgbLampService.state.isOn ? rgbLampService.state.color : .gray)
             .background(Color.black.edgesIgnoringSafeArea(.bottom))
             .frame(height: 100)
         }
-        .disabled(!lampService.state.isConnected)
+        .disabled(!rgbLampService.state.isConnected)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action : {
             self.mode.wrappedValue.dismiss()
@@ -77,20 +77,20 @@ struct LampView: View {
                     .foregroundColor(.white)
                     .shadow(radius: 2.0)
             })
-        .onAppear(perform: lampService.refresh)
+        .onAppear(perform: rgbLampService.refresh)
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-            lampService.refresh()
+            rgbLampService.refresh()
         }
     }
     
-    init(_ lamp: Lamp) {
+    init(_ lamp: RGBLamp) {
         self.lamp = lamp
-        self.lampService = lamp.getService(LampService.SERVICE_UUID) as! LampService
+        self.rgbLampService = lamp.getService(RGBLampService.SERVICE_UUID) as! RGBLampService
     }
 }
 
 struct MoonLampView_Previews: PreviewProvider {
     static var previews: some View {
-        LampView(Lamp(name: "test lamp device"))
+        RGBLampView(RGBLamp(name: "test lamp device"))
     }
 }
